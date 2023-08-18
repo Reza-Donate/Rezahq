@@ -24,19 +24,19 @@ const Hero = () => {
     <div className="flex  ">
        <picture>
         <source
-          srcSet="../../public/left-mobile-pattern.png"
+          srcSet="./public/left-mobile-pattern.png"
           media="(min-width:768px)"
         />
-        <source srcSet="../../public/left-pattern.png" />
-        <img className="absolute top-[20rem] z-0 " src="../../public/left-pattern.png" alt="pattern" />
+        <source srcSet="./public/left-pattern.png" />
+        <img className="absolute top-[20rem] z-0 " src="./public/left-pattern.png" alt="pattern" />
       </picture>
       <picture>
         <source
-          srcSet="../../public/right-mobile-pattern.png"
+          srcSet="./public/right-mobile-pattern.png"
           media="(min-width:768px)"
         />
-        <source srcSet="../../public/right-pattern.png" />
-        <img className="absolute top-[20rem] z-0 right-0" src="../../public/right-pattern.png" alt="pattern" />
+        <source srcSet="./public/right-pattern.png" />
+        <img className="absolute top-[20rem] z-0 right-0" src="./public/right-pattern.png" alt="pattern" />
       </picture>
     </div>
     </div>
