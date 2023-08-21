@@ -1,6 +1,7 @@
 import React from "react";
 import hero from "../assets/hero.png";
-import rightPattern from "../assets/right-pattern.png"
+import rightMobilePattern from "../assets/right-mobile-pattern.png";
+import rightDesktopPattern from "../assets/right-pattern.png";
 
 const Hero = () => {
   return (
@@ -24,8 +25,7 @@ const Hero = () => {
         </p>
       </div>
       <div className="flex">
-        <img src={rightPattern} alt="" />
-        {/* <picture>
+        <picture>
           <source
             srcSet="../public/left-mobile-pattern.png"
             media="(min-width:768px)"
@@ -38,17 +38,14 @@ const Hero = () => {
           />
         </picture>
         <picture>
-          <source
-            srcSet="../public/right-mobile-pattern.png"
-            media="(min-width:768px)"
-          />
+          <source srcSet={rightDesktopPattern} media="(min-width:768px)" />
           <source srcSet="../public/right-pattern.png" />
           <img
             className="absolute top-[20rem] z-0 right-0"
-            src="./public/right-pattern.png"
+            src={rightMobilePattern}
             alt="pattern"
           />
-        </picture> */}
+        </picture>
       </div>
     </div>
   );
