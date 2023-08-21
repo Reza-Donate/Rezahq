@@ -1,5 +1,6 @@
 import React from "react";
 import hero from "../assets/hero.png";
+import rightPattern from "../assets/right-pattern.png"
 
 const Hero = () => {
   return (
@@ -22,8 +23,8 @@ const Hero = () => {
           things that matters to you.
         </p>
       </div>
-      <div className="flex  ">
-        <img src="../../public/left-pattern.png" alt="" />
+      <div className="flex">
+        <img src={rightPattern} alt="" />
         {/* <picture>
           <source
             srcSet="../public/left-mobile-pattern.png"
