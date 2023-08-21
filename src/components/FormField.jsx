@@ -20,7 +20,7 @@ const FormField = () => {
             <Select name={"Select your Country"} />
             <Select name={"Select your Gender"} />
           </div>
-          <div >
+          <div>
             <textarea
               className="h-44 p-2 mt-5 rounded-sm text-xs w-[100%]  "
               placeholder=" Share your expectations about this Product with us...."

@@ -4,10 +4,10 @@ import DesktopNav from "./DesktopNav";
 
 const Header = () => {
   return (
-      <header>
-        <MobileNav />
-        <DesktopNav />
-      </header>
+    <header className="sticky top-0 z-10">
+      <MobileNav />
+      <DesktopNav />
+    </header>
   );
 };
 

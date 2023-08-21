@@ -3,10 +3,9 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import FormField from "../components/FormField";
 
-
 const Home = () => {
   return (
-    <div >
+    <div>
       <Header />
       <Hero />
       <FormField />
