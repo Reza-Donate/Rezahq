@@ -5,7 +5,7 @@ import Countries from "./Countries";
 
 const FormField = () => {
   return (
-    <section className="mt-20 absolute z-10">
+    <section className="mt-20 sticky  ">
       <h2 className="text-center text-xl text-[#0D265C] mb-3 md:text-3xl font-extrabold">
         Join Our Waitlist
       </h2>
