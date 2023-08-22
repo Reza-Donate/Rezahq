@@ -1,15 +1,14 @@
 import React from "react";
 import logo from "../assets/reza-logo.png";
 
-const DesktopNav = () => {
+const MobileNavBar = () => {
   const links = ["About Us", "Meet the Team", "Contact Us"];
-
   return (
-    <nav className="hidden md:flex px-12 lg:px-28 xl:px-32 text-lg text-[#D2D2D2]  bg-[#0D265C] items-center justify-between ">
+    <nav className="">
       <div>
-        <img width={160} className="" src={logo} alt="reza logo" />
+        <img width={100} className="" src={logo} alt="reza logo" />
       </div>
-      <div className="flex gap-5">
+      <div className="">
         {links.map((item, index) => (
           <p key={index}>{item}</p>
         ))}
@@ -18,4 +17,4 @@ const DesktopNav = () => {
   );
 };
 
-export default DesktopNav;
+export default MobileNavBar;

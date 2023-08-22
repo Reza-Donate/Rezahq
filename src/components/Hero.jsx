@@ -31,9 +31,9 @@ const Hero = () => {
         </p>
       </div>
       <div className="flex">
-        <img className="absolute top-[20rem]" src={leftPattern} alt="left pattern" />
+        <img className="absolute top-[20rem] md:top-[17rem] lg:top-[27rem]" src={leftPattern} alt="left pattern" />
         <img
-          className="absolute top-[20rem] right-0"
+          className="absolute top-[20rem] md:top-[17rem] lg:top-[27rem] right-0"
           src={rightPattern}
           alt="right pattern"
         />
