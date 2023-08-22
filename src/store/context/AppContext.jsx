@@ -1,13 +1,11 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext } from "react";
+import { useWindowSize } from "../../utils/UseWindowSize";
 
 const Context = createContext();
 const AppContext = ({ children }) => {
-  const [m, setM] = useState("");
-  const handleClick = () => {
-    setM("Hello");
-  };
+const width = useWindowSize()
   return (
-    <Context.Provider value={{ handleClick, m }}>{children}</Context.Provider>
+    <Context.Provider value={{width }}>{children}</Context.Provider>
   );
 };
 export const Store = () => useContext(Context);
