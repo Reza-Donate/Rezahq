@@ -2,11 +2,13 @@ import React, { createContext, useContext, useState } from "react";
 
 const Context = createContext();
 const AppContext = ({ children }) => {
-  const [m, setM] = useState('');
+ const [state , setState] = useState(false)
+
   const handleClick = () => {
-    setM("Hello")
+    setState(prev=>!prev)
+  
   }
-  return <Context.Provider value={{handleClick, m}}>{children}</Context.Provider>;
+  return <Context.Provider value={{handleClick, state}}>{children}</Context.Provider>;
 };
 export const Store = () => useContext(Context);
 export default AppContext;

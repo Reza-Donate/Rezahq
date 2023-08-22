@@ -1,6 +1,7 @@
 import React from "react";
 import Input from "./Input";
 import Select from "./Select";
+import Countries from "./Countries";
 
 const FormField = () => {
   return (
@@ -32,6 +33,8 @@ const FormField = () => {
             </button>
           </div>
         </form>
+      <Countries/>
+
       </div>
     </section>
   );
