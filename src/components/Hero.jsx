@@ -1,5 +1,6 @@
 import React from "react";
 import { Store } from "../store/context/AppContext";
+import hero from '../assets/hero.png'
 import rightMobilePattern from "../assets/right-mobile-pattern.png";
 import rightDesktopPattern from "../assets/right-pattern.png";
 import leftMobilePattern from "../assets/left-mobile-pattern.png";
@@ -13,8 +14,8 @@ const Hero = () => {
     <div>
       <img
         className="h-[400px] md:w-[600px] md:h-[550px] lg:h-[700px]  mx-auto"
-        src="../../public/hero.png"
-        alt=""
+        src={hero}
+        alt="hero image"
       />
       <div className="absolute top-24 md:top-32  md:px-3 text-[#0D265C] ">
         <div className="absolute md:top-4 z-0 md:w-28 rounded-md w-16 h-1 top-[14px] left-[48px]   md:left-[136px] lg:left-[230px] xl:left-[310px] md:h-2  bg-[#E38900] "></div>
@@ -30,11 +31,11 @@ const Hero = () => {
         </p>
       </div>
       <div className="flex">
-        <img className="absolute top-[20rem]" src={leftPattern} alt="pattern" />
+        <img className="absolute top-[20rem]" src={leftPattern} alt="left pattern" />
         <img
           className="absolute top-[20rem] right-0"
           src={rightPattern}
-          alt="pattern"
+          alt="right pattern"
         />
       </div>
     </div>
