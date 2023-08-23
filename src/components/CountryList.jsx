@@ -1,16 +1,12 @@
-import React from 'react'
+import React from "react";
 
-
-const CountryList = ({flag, name}) => {
-
-
+const CountryList = ({ flag, name }) => {
   return (
-    <div className='flex gap-5 mb-3' >
-        <img src={flag} alt='' />
-        <p>{name}</p>
+    <div className="flex gap-5 mb-3">
+      <img src={flag} alt="" />
+      <p>{name}</p>
+    </div>
+  );
+};
 
-  </div>
-  )
-}
-
-export default CountryList
+export default CountryList;
