@@ -2,6 +2,8 @@ import React from "react";
 import Input from "./Input";
 import Select from "./Select";
 import Countries from "./Countries";
+import Gender from "./Gender";
+
 
 const FormField = () => {
   return (
@@ -29,7 +31,11 @@ const FormField = () => {
             </button>
           </div>
         </form>
-        <Countries />
+      <Countries/>
+      <Gender/>
+
+      </div>
+
     </section>
   );
 };

@@ -1,9 +1,8 @@
 import React from "react";
 import hero from "../assets/hero.png";
-
 const Hero = () => {
   return (
-    <div className="bg-[#e3fffc] pb-8 lg:grid grid-cols-2 ">
+  <div className="bg-[#e3fffc] pb-8 lg:grid grid-cols-2 ">
       <div className="order-last">
         <img
           className="h-[400px] md:w-[600px] md:h-[550px] lg:h-[500px]  mx-auto"
@@ -29,7 +28,7 @@ const Hero = () => {
           </button>
         </div>
       </div>
-    </div>
+      </div>
   );
 };
 
