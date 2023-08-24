@@ -1,46 +1,33 @@
 import React from "react";
-import { Store } from "../store/context/AppContext";
 import hero from "../assets/hero.png";
-import rightMobilePattern from "../assets/right-mobile-pattern.png";
-import rightDesktopPattern from "../assets/right-pattern.png";
-import leftMobilePattern from "../assets/left-mobile-pattern.png";
-import leftDesktopPattern from "../assets/left-pattern.png";
 
 const Hero = () => {
-  const { width } = Store();
-  const rightPattern = width > 540 ? rightMobilePattern : rightDesktopPattern;
-  const leftPattern = width > 540 ? leftMobilePattern : leftDesktopPattern;
   return (
-    <div>
-      <img
-        className="h-[400px] md:w-[600px] md:h-[550px] lg:h-[700px]  mx-auto"
-        src={hero}
-        alt="hero image"
-      />
-      <div className="absolute top-24 md:top-32  md:px-3 text-[#0D265C] ">
-        <div className="absolute md:top-4 z-0 md:w-28 rounded-md w-16 h-1 top-[14px] left-[48px]   md:left-[136px] lg:left-[230px] xl:left-[310px] md:h-2  bg-[#E38900] "></div>
-        <p className=" text-xl relative z-0 pl-14  md:text-3xl font-extrabold md:pl-36  lg:pl-60 xl:pl-80  ">
+    <div className="bg-[#e3fffc] pb-8 lg:grid grid-cols-2 ">
+      <div className="order-last">
+        <img
+          className="h-[400px] md:w-[600px] md:h-[550px] lg:h-[500px]  mx-auto"
+          src={hero}
+          alt="hero image"
+        />
+      </div>
+      <div className="pt-5 md:pt-12 md:px-3 text-[#0D265C] px-5 lg:pl-[80px] lg:mt-20 ">
+        <div className="mx-auto -mb-[18px] lg:mx-0 md:-mb-6 z-0 md:w-24  rounded-md w-16 h-1 top-[18px] left-[136px]  md:left-[340px] lg:left-[230px] xl:left-[310px] md:h-2  bg-[#E38900] "></div>
+        <p className=" text-xl relative z-0 text-center lg:text-left md:text-3xl font-extrabold lg:pl-3  ">
           Reza
         </p>
-        <h1 className="text-3xl md:text-6xl lg:px-44 xl:px-36 text-center pb-2 xl:text-7xl xl:leading-[5rem]  md:py-2 font-extrabold">
-          Africa’s Number 1 Fundraising Platform
+        <h1 className="text-2xl md:text-6xl md:leading-[5rem] text-center lg:text-4xl lg:leading-[3rem] pb-2 xl:text-5xl xl:leading-[4rem] lg:text-left   md:py-2 font-extrabold">
+          Africa’s Number 1 Crowdfunding Platform
         </h1>
-        <p className="text-center px-6 font-medium text-sm md:text-2xl  md:px-24  lg:px-56 xl:px-72">
+        <p className="text-center px-3 font-medium lg:text-left text-lg md:text-3xl md:leading-[3rem]  lg:px-0 lg:text-2xl lg:leading-8 md:px-20  ">
           At Reza, our work is to help you raise that funds that you need for
           things that matters to you.
         </p>
-      </div>
-      <div className="flex">
-        <img
-          className="absolute top-[20rem] md:top-[17rem] lg:top-[27rem]"
-          src={leftPattern}
-          alt="left pattern"
-        />
-        <img
-          className="absolute top-[20rem] md:top-[17rem] lg:top-[27rem] right-0"
-          src={rightPattern}
-          alt="right pattern"
-        />
+        <div className="flex justify-center lg:justify-start mt-5">
+          <button className="w-[274px] md:w-80 md:p-6 md:text-lg h-max p-4 lg:p-4 rounded bg-[#0D265C] text-white text-sm">
+            Join Us Today
+          </button>
+        </div>
       </div>
     </div>
   );

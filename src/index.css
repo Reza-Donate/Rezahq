@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+/* body {
   background-color: #e3fffc;
 }
 .left-pattern{
 background-image: url("/right-pattern.png");
-}
+} */
