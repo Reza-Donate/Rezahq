@@ -33,9 +33,6 @@ const FormField = () => {
         </form>
       <Countries/>
       <Gender/>
-
-      </div>
-
     </section>
   );
 };
