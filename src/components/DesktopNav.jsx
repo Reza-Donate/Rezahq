@@ -9,9 +9,9 @@ const DesktopNav = () => {
       <div>
         <img width={160} className="" src={logo} alt="reza logo" />
       </div>
-      <div className="flex gap-9">
+      <div className="flex gap-9 ">
         {links.map((item, index) => (
-          <p key={index}>{item}</p>
+          <p className="hover:text-xl cursor-pointer" key={index}>{item}</p>
         ))}
       </div>
     </nav>

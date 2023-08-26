@@ -1,12 +1,12 @@
 import React from "react";
 import { FaTwitterSquare, FaFacebookSquare, FaLinkedin } from "react-icons/fa";
 
-const Socials = ({color}) => {
+const Socials = ({location }) => {
   return (
-    <div className="flex gap-5 justify-center pt-6">
-      <FaLinkedin color={color}  fontSize="1.8rem" />
-      <FaTwitterSquare color={color}  fontSize="1.8rem" />
-      <FaFacebookSquare color={color} fontSize="1.8rem" />
+    <div className={`flex gap-5 pt-7 ${location}`}>
+      <FaLinkedin color="white" fontSize="1.6rem" />
+      <FaTwitterSquare color="white" fontSize="1.6rem" />
+      <FaFacebookSquare color="white" fontSize="1.6rem" />
     </div>
   );
 };
