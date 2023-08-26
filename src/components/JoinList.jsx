@@ -4,12 +4,12 @@ const JoinList = ({ img, heading, paragraph }) => {
   return (
   <section >
     {/* mobile */}
-      <div className="h-[150px] lg:w-full py-2 items-center gap-4 flex border-2 lg:hidden border-[#D9D9D9]  md:mx-auto  px-5 rounded-lg  mb-6 text-[#7B7B7B]">
+      <div className="h-[150px] w-full py-2 items-center gap-4 flex border-2 lg:hidden border-[#D9D9D9]    px-5 rounded-lg  mb-6 text-[#7B7B7B]">
       <div>
-        <h4 className="text-base mt-1 font-bold  text-[#545454]">
+        <h4 className="text-base mt-1 font-bold   text-[#545454]">
           {heading}
         </h4>
-        <p className="text-sm leading-7">{paragraph}</p>
+        <p className="text-sm mt-1 leading-5 ">{paragraph}</p>
       </div>
     
         <img width={120} src={img} alt="" />

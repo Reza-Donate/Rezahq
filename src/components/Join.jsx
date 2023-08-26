@@ -6,7 +6,7 @@ import organisation from "../assets/organization.png";
 
 const Join = () => {
   return (
-    <div className=" py-16 px-20 bg-[#E3FFFC] ">
+    <div className=" py-16 px-6 lg:px-20 bg-[#E3FFFC] ">
       <h3 className="text-lg font-bold mb-5 text-[#545454]">
         How You Can Join Us ..
       </h3>
