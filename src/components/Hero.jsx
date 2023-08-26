@@ -1,8 +1,9 @@
 import React from "react";
 import hero from "../assets/hero.png";
+import { NavHashLink as Link } from "react-router-hash-link";
 const Hero = () => {
   return (
-  <div className="bg-[#e3fffc] pb-8 lg:grid grid-cols-2 ">
+    <div className="bg-[#e3fffc] pb-8 lg:grid grid-cols-2 ">
       <div className="order-last">
         <img
           className="h-[400px] md:w-[600px] md:h-[550px] lg:h-[500px]  mx-auto"
@@ -23,12 +24,14 @@ const Hero = () => {
           things that matters to you.
         </p>
         <div className="flex justify-center lg:justify-start mt-5">
-          <button className="w-[274px] md:w-80 md:p-6 md:text-lg h-max p-4 lg:p-4 rounded bg-[#0D265C] text-white text-sm">
-            Join Us Today
-          </button>
+          <Link to={"#waitlist"} smooth>
+            <button className="w-[274px] md:w-80 md:p-6 md:text-lg h-max p-4 lg:p-4 rounded bg-[#0D265C] text-white text-sm hover:bg-[#E38900] ">
+              Join Us Today
+            </button>
+          </Link>
         </div>
       </div>
-      </div>
+    </div>
   );
 };
 

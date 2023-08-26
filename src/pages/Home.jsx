@@ -4,15 +4,17 @@ import Hero from "../components/Hero";
 import FormField from "../components/FormField";
 import MobileMenu from "../components/MobileMenu";
 import Service from "../components/Service";
-import Footer from "../components/Footer"
+import Footer from "../components/Footer";
+import Join from "../components/Join";
 
 const Home = () => {
   return (
-    <div className="">
+    <div>
       <Header />
       <MobileMenu />
       <Hero />
       <Service />
+      <Join />
       <FormField />
       <Footer />
     </div>
