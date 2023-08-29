@@ -7,7 +7,7 @@ import Gender from "./Gender";
 const FormField = () => {
   return (
     <section id="waitlist" className=" h-max p-6 md:px-16 lg:px-32 xl:px-40  ">
-      <p className="text-black text-left  text-base mt-5 md:text-2xl md:mt-10  lg:text-lg ">
+      <p className="text-black text-left text-base mt-5 md:text-4xl md:mt-10  lg:text-2xl ">
         Join our waitlist to get weekly updates from us and notifications about
         our launch date.
       </p>

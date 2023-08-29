@@ -7,7 +7,7 @@ import { appActions } from "../store/slices/app-slice";
 const MobileMenu = () => {
   const links = ["About Us", "Meet the Team", "Contact Us"];
   const { menuOpen } = useSelector((state) => state.app);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   if (!menuOpen) return null;
   return (
     <>

@@ -5,7 +5,7 @@ const AppContext = ({ children }) => {
  const [gender, setGender] = useState(false)
 
   const handleClick = (name) => {
-  console.log(name)
+    console.log(name)
   if (name === 'Select your Country' ){
     setState(prev=>!prev)
     setGender(false)

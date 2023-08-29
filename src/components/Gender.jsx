@@ -1,25 +1,17 @@
-import React from 'react'
-import { Store } from '../store/context/AppContext'
+import React from "react";
+import { Store } from "../store/context/AppContext";
 
-
-const Gender = ({sex}) => {
-    const arr =['Male', 'Female', 'Others']
-    const {gender} = Store()
-    
+const Gender = () => {
+  const arr = ["Male", "Female", "Others"];
+  const { gender } = Store();
+  if (!gender) return null;
   return (
-      
-    <div  >
-        {gender && <div className='w-[35%] max-h-12 overflow-scroll bg-white p-5 absolute top-[23rem] right-44'  >
-        {arr.map((Gender, index)=>{
-            return(
-                <p key={index} >{Gender}</p>
-            )
-        })}
-
+    <div className="w-[87%] top-[205rem] lg:w-[38%] xl:w-[39%] lg:right-[8rem] rounded-md max-h-44 shadow-md overflow-scroll bg-white p-5 absolute lg:top-[145rem] xl:top-[144rem] ">
+      {arr.map((Gender, index) => {
+        return <p key={index}>{Gender}</p>;
+      })}
     </div>
-        }
-    </div>
-  )
-}
+  );
+};
 
-export default Gender
+export default Gender;
