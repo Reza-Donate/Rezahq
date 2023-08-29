@@ -2,12 +2,13 @@ import React from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { Store } from "../store/context/AppContext";
 const Select = ({ name }) => {
-const { handleClick } = Store();
+  const { handleClick } = Store();
   return (
-    <div className={`flex justify-between border-2 col-span-2 border-[#0d265c8d]  mt-5 items-center h-14 lg:h-16 rounded-md text-xs  w-[100%] text-[#A8A8A8]  bg-white px-2 `}>
+    <div
+      className={`flex justify-between border-2 col-span-2 border-[#0d265c8d]  mt-5 items-center h-14 lg:h-16 rounded-md text-xs  w-[100%] text-[#A8A8A8]  bg-white px-2 `}>
       {name}
-    <div onClick={handleClick}>
-        <MdOutlineKeyboardArrowDown color="black" fontSize="1.5em" />
+      <div onClick={() => handleClick(name)}>
+        <MdOutlineKeyboardArrowDown  color="black" fontSize="1.5em" />
       </div>
     </div>
   );

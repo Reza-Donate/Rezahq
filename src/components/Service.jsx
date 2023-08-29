@@ -7,7 +7,7 @@ import love from "../assets/solar_hand-heart-bold.png";
 const Service = () => {
   return (
     <div className="mx-6 py-16 lg:mx-20 xl:mx-[85px] ">
-      <h3 className="text-lg font-bold mb-5 text-[#545454]">
+      <h3 className="text-2xl font-bold mb-5 text-center text-[#545454]">
         What You Can Do On Our Platform...
       </h3>
       <div className="lg:flex gap-5">

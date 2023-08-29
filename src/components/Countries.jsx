@@ -15,7 +15,7 @@ const Countries = () => {
   return (
     <div>
       {state && (
-        <div className="w-[37%] rounded-md max-h-44 shadow-md overflow-scroll bg-white p-5 absolute top-[24rem] ">
+        <div className="w-[87%] top-[201rem] lg:w-[36%] xl:w-[39%]  rounded-md max-h-44 shadow-md overflow-scroll bg-white p-5 absolute lg:top-[145rem] xl:top-[145rem] ">
           <CountryList flag={RW} name={"Rwanda"} />
           <CountryList flag={CM} name={"Cameroon"} />
           <CountryList flag={GH} name={"Ghana"} />
