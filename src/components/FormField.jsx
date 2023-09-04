@@ -7,6 +7,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { updateField } from "../store/slices/form-slice";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../firebase_setup/firebase";
+import Loading from "./Loading";
+import Success from "./Success";
+
 
 // const DisplayingErrorMessagesSchema = Yup.object().shape({
 //   name: Yup.string()
@@ -18,7 +21,8 @@ import { db } from "../firebase_setup/firebase";
 // });
 
 const FormField = () => {
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
+  const [modal, setModal] = useState(false);
   const dispatch = useDispatch();
   const form = useSelector((state) => state.form);
 
@@ -27,20 +31,21 @@ const FormField = () => {
   };
 
   const handleSubmit = async (form) => {
-    setLoading(false)
+    setLoading(true);
     try {
-      setLoading(true)
+      // setLoading(true);
       const docRef = await addDoc(collection(db, "users"), form);
       console.log("Document written with ID: ", docRef.id);
-      setLoading(false)
+      setLoading(false);
+      setModal(true)
     } catch (e) {
       console.error("Error adding document: ", e);
     }
+  
   };
-  console.log(loading)
   return (
     <section id="waitlist" className=" h-max p-6 md:px-16 lg:px-32 xl:px-40  ">
-      <p className="text-black text-left text-base mt-5 md:text-4xl md:mt-10  lg:text-2xl ">
+      <p className="text-black font-bold text-left text-base mt-5 md:text-4xl md:mt-10  lg:text-2xl ">
         Join our waitlist to get weekly updates from us and notifications about
         our launch date.
       </p>
@@ -52,7 +57,7 @@ const FormField = () => {
           <Form>
             <div>
               <Field
-                className={`h-14 rounded-md text-xs w-[100%] border-2 border-[#0d265c6d] lg:h-16  mt-5 p-2`}
+                className={`h-14 rounded-md text-sm w-[100%] border-2 border-[#0d265c6d] lg:h-16  mt-5 p-2`}
                 type="text"
                 id="name"
                 name="name"
@@ -68,7 +73,7 @@ const FormField = () => {
                 name="color"
                 onChange={handleChange("country")}
                 value={form.country}
-                className="flex justify-between border-2 col-span-2 border-[#0d265c8d]  mt-5 items-center h-14 lg:h-16 rounded-md text-xs  w-[100%] text-[#A8A8A8]  bg-white px-2 ">
+                className="flex justify-between border-2 col-span-2 border-[#0d265c8d]  mt-5 items-center h-14 lg:h-16 rounded-md text-sm  w-[100%] text-[#A8A8A8]  bg-white px-2 ">
                 <option value="red">Red</option>
                 <option value="green">Green</option>
                 <option value="blue">Blue</option>
@@ -78,7 +83,7 @@ const FormField = () => {
                 name="color"
                 onChange={handleChange("gender")}
                 value={form.gender}
-                className="flex justify-between border-2 col-span-2 border-[#0d265c8d]  mt-5 items-center h-14 lg:h-16 rounded-md text-xs  w-[100%] text-[#A8A8A8]  bg-white px-2 ">
+                className="flex justify-between border-2 col-span-2 border-[#0d265c8d]  mt-5 items-center h-14 lg:h-16 rounded-md text-sm  w-[100%] text-[#A8A8A8]  bg-white px-2 ">
                 <option value="red">Red</option>
                 <option value="green">Green</option>
                 <option value="blue">Blue</option>
@@ -87,7 +92,7 @@ const FormField = () => {
 
             <div>
               <Field
-                className={`h-14 rounded-md text-xs w-[100%] border-2 border-[#0d265c6d] lg:h-16  mt-5 p-2`}
+                className={`h-14 rounded-md text-sm w-[100%] border-2 border-[#0d265c6d] lg:h-16  mt-5 p-2`}
                 type="email"
                 id="email"
                 name="email"
@@ -102,7 +107,7 @@ const FormField = () => {
               <Field
                 onChange={handleChange("message")}
                 value={form.message}
-                className="h-44 p-2 mt-5 rounded-md border-2 border-[#0d265c8d] text-xs w-[100%] lg:h-48  "
+                className="h-44 p-2 mt-5 rounded-md border-2 border-[#0d265c8d] text-sm w-[100%] lg:h-48  "
                 placeholder=" Share your expectations about this Product with us...."
                 as="textarea"
                 id="message"
@@ -119,8 +124,10 @@ const FormField = () => {
           </Form>
         )}
       </Formik>
-      {/* <Countries />
-      <Gender /> */}
+
+
+      {loading && <Loading />}
+      {modal && <Success />}
     </section>
   );
 };
