@@ -9,6 +9,7 @@ const appSlice = createSlice({
     menuHandleClick(state) {
       state.menuOpen = !state.menuOpen;
     },
+
   },
 });
 export const appActions = appSlice.actions;

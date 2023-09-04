@@ -6,6 +6,7 @@ import MobileMenu from "../components/MobileMenu";
 import Service from "../components/Service";
 import Footer from "../components/Footer";
 import Join from "../components/Join";
+import Waitlist from "../components/Waitlist";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <Hero />
       <Service />
       <Join />
+      <Waitlist />
       <FormField />
       <Footer />
     </div>
