@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { appActions } from "../store/slices/app-slice";
+import { menuHandleClick} from "../store/slices/app-slice";
 
 const Hamburger = () => {
   const { menuOpen } = useSelector((state) => state.app);
@@ -9,7 +9,7 @@ const Hamburger = () => {
   return (
     <button
       className="flex flex-col h-12 w-12  rounded justify-center items-center group"
-      onClick={() => dispatch(appActions.menuHandleClick())}>
+      onClick={() => dispatch(menuHandleClick())}>
       <div
         className={`${genericHamburgerLine} ${
           menuOpen

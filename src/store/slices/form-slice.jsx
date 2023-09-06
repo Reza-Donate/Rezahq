@@ -5,14 +5,15 @@ export const formSlice = createSlice({
     name: "",
     email: "",
     message: "",
-    country: "",
-    gender: "",
+    country: "Select your Country",
+    gender: "Select Gender",
   },
   reducers: {
-    updateField: (state, action) => {
+    updateSelect: (state, action) => {
       state[action.payload.field] = action.payload.value;
     },
+  
   },
 });
-export const { updateField, resetForm } = formSlice.actions;
+export const { updateSelect } = formSlice.actions;
 export default formSlice;
