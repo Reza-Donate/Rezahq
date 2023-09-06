@@ -9,19 +9,23 @@ const Footer = () => {
   return (
     <div className=" bg-[#0D265C] lg:py-5 text-white md:flex lg:gap-72 md:px-[70px] ">
       <div className="pl-5">
-        <img className="-ml-9 lg:-ml-16 w-[11rem] lg:w-[20rem]" src={logo} alt="reza logo"  />
+        <img
+          className="-ml-9 lg:-ml-16 w-[11rem] lg:w-[20rem]"
+          src={logo}
+          alt="reza logo"
+        />
         <p className="">Lets help you raise.......</p>
-        <Socials  />
+        <Socials />
       </div>
       <div className="py-8 pl-5 lg:pt-24 ">
         <h5 className="font-bold text-xl mb-5  ">About Us</h5>
-        <p className="flex gap-3 cursor-pointer">
+        <p className="flex gap-3 ">
           <img src={mail} alt="mail" /> RezaNg@gmail.com
         </p>
-        <p className="flex gap-3 my-3 cursor-pointer">
+        <p className="flex gap-3 my-3 ">
           <img src={phone} alt="phone" /> +2348103651314
         </p>
-        <p className="flex gap-3 cursor-pointer">
+        <p className="flex gap-3 ">
           <img src={location} alt="location" />
           Lagos, Nigeria
         </p>

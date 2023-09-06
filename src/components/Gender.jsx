@@ -1,15 +1,20 @@
 import React from "react";
-import { Store } from "../store/context/AppContext";
+import { useDispatch, useSelector } from "react-redux";
+import { updateSelect } from "../store/slices/form-slice";
 
 const Gender = () => {
   const arr = ["Male", "Female", "Others"];
-  const { gender } = Store();
-  if (!gender) return null;
+  const { genderMenu } = useSelector((state) => state.app);
+  const dispatch = useDispatch();
+  const handleChange = (field) => (evt) => {
+    dispatch(updateSelect({ field, value: evt.target.innerText }));
+  };
+  if (!genderMenu) return null;
   return (
-    <div className="w-[87%] top-[205rem] border-2 lg:w-[38%] border-[#0d265c8d]   xl:w-[39%] lg:right-[8rem] rounded-md max-h-44 shadow-md overflow-scroll bg-white p-5 absolute lg:top-[145rem] xl:top-[144rem] ">
+    <div className="w-[87%] top-[225rem] border-2 lg:w-[36%] border-[#0d265c8d]   xl:w-[36%] lg:right-[8rem] rounded-md max-h-44 shadow-md overflow-scroll bg-white p-5 absolute lg:top-[178rem] xl:top-[174rem] xl:right-[10rem] ">
       {arr.map((Gender, index) => {
         return (
-          <p className="mb-3" key={index}>
+          <p onClick={handleChange("gender")} className="mb-3" key={index}>
             {Gender}
           </p>
         );

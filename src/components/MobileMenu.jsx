@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Socials from "./Socials";
 import { motion } from "framer-motion";
-import { appActions } from "../store/slices/app-slice";
+import { menuHandleClick} from "../store/slices/app-slice";
 
 const MobileMenu = () => {
   const links = ["About Us", "Meet the Team", "Contact Us"];
@@ -12,7 +12,7 @@ const MobileMenu = () => {
   return (
     <>
       <div
-        onClick={() => dispatch(appActions.menuHandleClick())}
+        onClick={() => dispatch(menuHandleClick())}
         className="fixed bottom-0 top-20 right-0 left-0 bg-[rgb(0,0,0,0.7)] z-10"
       />
       <motion.nav
