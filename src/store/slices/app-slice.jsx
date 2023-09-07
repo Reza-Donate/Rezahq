@@ -16,7 +16,7 @@ const appSlice = createSlice({
       if (action.payload === "Select your Country") {
         state.countryMenu = !state.countryMenu;
         state.genderMenu = false;
-      } else {
+      } else  {
         state.genderMenu = !state.genderMenu;
         state.countryMenu = false;
       }

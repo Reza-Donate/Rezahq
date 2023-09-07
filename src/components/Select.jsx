@@ -5,12 +5,8 @@ import { selectHandleClick } from "../store/slices/app-slice";
 // import { Store } from "../store/context/AppContext";
 
 const Select = ({ name }) => {
-  // const { handleClick } = Store();
   const dispatch = useDispatch();
-  // const selectHandleClick = () => {
-
-  // }
-
+ 
   return (
     <div
       onClick={() => dispatch(selectHandleClick(name))}
