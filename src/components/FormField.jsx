@@ -9,6 +9,7 @@ import Success from "./Success";
 import Countries from "./Countries";
 import Select from "./Select";
 import Share from "./Share";
+import Input from "./Input";
 
 const validate = (values) => {
   let errors = {};
@@ -29,7 +30,6 @@ const FormField = () => {
   const [modal, setModal] = useState(false);
   const [share, setShare] = useState(false);
   const form = useSelector((state) => state.form);
-  console.log(share);
 
   const handleSubmit = async (form) => {
     setLoading(true);
@@ -54,7 +54,6 @@ const FormField = () => {
     validate: validate,
     onSubmit: handleSubmit,
   });
-  console.log(loading);
   const shareHandleClick = () => {
     document.body.style.overflow = "scroll";
     setModal(false);
@@ -62,22 +61,15 @@ const FormField = () => {
   };
   return (
     <section id="waitlist" className=" h-max p-6 md:px-16 lg:px-32 xl:px-40  ">
-      <p className="text-black font-bold text-left text-base mt-5 md:text-4xl md:mt-10  lg:text-2xl ">
+      <p className="text-black font-bold text-center text-base mt-5 md:text-4xl md:mt-10  lg:text-2xl ">
         Join our waitlist to get weekly updates from us and notifications about
         our launch date.
       </p>
 
       <form onSubmit={formik.handleSubmit}>
         <div>
-          <input
-            className={`h-14 rounded-md text-sm w-[100%] border-2 border-[#0d265c6d] lg:h-16  mt-5 p-2`}
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Name"
-            onChange={formik.handleChange}
-            value={formik.values.name}
-          />
+          <Input placeholder={"Name"} name={"name"} formik={formik} />
+          <Input placeholder={"Email Address"} name={"email"} formik={formik} />
           {formik.errors.name && (
             <p className="text-right text-red-500">{formik.errors.name}</p>
           )}
@@ -85,29 +77,10 @@ const FormField = () => {
         <div className="md:grid grid-cols-4 gap-5 justify-center">
           <div>
             <Select name={form.country} />
-            {/* {form.country === "Select your Country" && (
-            <p className="text-right text-red-500">{formik.errors.name}</p>
-          )} */}
           </div>
           <div>
             <Select name={form.gender} />
-            {/* <p>hi</p> */}
           </div>
-        </div>
-
-        <div>
-          <input
-            className={`h-14 rounded-md text-sm w-[100%] border-2 border-[#0d265c6d] lg:h-16  mt-5 p-2`}
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Email Address"
-            onChange={formik.handleChange}
-            value={formik.values.email}
-          />
-          {formik.errors.email && (
-            <p className="text-right text-red-500">{formik.errors.email}</p>
-          )}
         </div>
 
         <div>

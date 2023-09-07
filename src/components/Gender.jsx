@@ -11,7 +11,7 @@ const Gender = () => {
   };
   if (!genderMenu) return null;
   return (
-    <div className="w-[87%] top-[225rem] border-2 lg:w-[36%] border-[#0d265c8d]   xl:w-[36%] lg:right-[8rem] rounded-md max-h-44 shadow-md overflow-scroll bg-white p-5 absolute lg:top-[178rem] xl:top-[174rem] xl:right-[10rem] ">
+    <div className="w-[87%] top-[230rem] border-2 lg:w-[36%] border-[#0d265c8d]   xl:w-[36%] lg:right-[8rem] rounded-md max-h-44 shadow-md overflow-scroll bg-white p-5 absolute lg:top-[178rem] xl:top-[174rem] xl:right-[10rem] ">
       {arr.map((Gender, index) => {
         return (
           <p onClick={handleChange("gender")} className="mb-3" key={index}>

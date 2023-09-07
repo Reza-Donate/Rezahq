@@ -14,7 +14,7 @@ const Countries = () => {
    const {countryMenu} = useSelector((state) => state.app)
   if (!countryMenu) return null;
   return (
-    <div className="w-[87%] top-[220rem] lg:w-[36%] border-2 border-[#0d265c8d]  rounded-md max-h-44 shadow-md overflow-scroll bg-white p-5 absolute lg:top-[176rem] xl:top-[174rem] ">
+    <div className="w-[87%] top-[225rem] lg:w-[36%] border-2 border-[#0d265c8d]  rounded-md max-h-44 shadow-md overflow-scroll bg-white p-5 absolute lg:top-[176rem] xl:top-[174rem] ">
       <CountryList flag={RW} name={"Rwanda"} />
       <CountryList flag={CM} name={"Cameroon"} />
       <CountryList flag={GH} name={"Ghana"} />
