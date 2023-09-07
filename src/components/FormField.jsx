@@ -61,7 +61,7 @@ const FormField = () => {
   };
   return (
     <section id="waitlist" className=" h-max p-6 md:px-16 lg:px-32 xl:px-40  ">
-      <p className="text-black font-bold text-center text-base mt-5 md:text-4xl md:mt-10  lg:text-2xl ">
+      <p className="text-[#545454 font-bold text-center text-2xl mt-5 md:text-4xl md:mt-10  lg:text-2xl ">
         Join our waitlist to get weekly updates from us and notifications about
         our launch date.
       </p>
